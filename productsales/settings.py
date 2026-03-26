@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-6)u$)ij3%pc$oyjxbtx*@chua=yhuva3vyswr8gt0$5oivhvt_
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["myproductsale-6.onrender.com", "localhost", "127.0.0.1"]
 
 
 INSTALLED_APPS = [
