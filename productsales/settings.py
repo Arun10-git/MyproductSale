@@ -1,5 +1,7 @@
 from pathlib import Path
 from datetime import timedelta
+import os
+
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,7 +13,10 @@ SECRET_KEY = 'django-insecure-6)u$)ij3%pc$oyjxbtx*@chua=yhuva3vyswr8gt0$5oivhvt_
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["myproductsale-9.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = os.getenv(
+    "ALLOWED_HOSTS",
+    "myproductsale-9.onrender.com,localhost,127.0.0.1"
+).split(",")
 
 
 INSTALLED_APPS = [
@@ -60,7 +65,7 @@ WSGI_APPLICATION = 'productsales.wsgi.application'
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config(default='')
+    'default': dj_database_url.config()
 }
 
 
@@ -110,3 +115,6 @@ SIMPLE_JWT={
     # 'ROTATE_REFRESH_TOKENS':True,
     # 'BLACKLIST_AFTER_ROTATION':True,
 }
+
+
+
