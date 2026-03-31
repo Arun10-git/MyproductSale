@@ -1,6 +1,7 @@
 from pathlib import Path
 from datetime import timedelta
 import os
+import dj_database_url
 
 
 
@@ -62,7 +63,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'productsales.wsgi.application'
 
 
-import dj_database_url
+
 
 DATABASES = {
     'default': dj_database_url.config()
