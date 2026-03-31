@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-6)u$)ij3%pc$oyjxbtx*@chua=yhuva3vyswr8gt0$5oivhvt_
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["myproductsale-6.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["myproductsale-9.onrender.com", "localhost", "127.0.0.1"]
 
 
 INSTALLED_APPS = [
@@ -57,15 +57,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'productsales.wsgi.application'
 
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sales_db',
-        'USER':'postgres',
-        'PASSWORD':'ArunArun$17',
-        'HOST':'localhost',
-        'PORT':'5432'
-    }
+    'default': dj_database_url.config(default='')
 }
 
 
