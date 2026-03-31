@@ -15,7 +15,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = os.getenv(
     "ALLOWED_HOSTS",
-    "myproductsale-9.onrender.com,localhost,127.0.0.1"
+    "myproductsale-10.onrender.com,localhost,127.0.0.1"
 ).split(",")
 
 
